@@ -1,3 +1,4 @@
+all: out compute computations engine client
 
 out:
 	mkdir out
@@ -33,3 +34,6 @@ run-client:
 	cd out && java -cp .:compute.jar:computations.jar\
 	    -Djava.security.policy=security.policy\
 	    client.ComputePi
+
+clean:
+	rm -rf out
